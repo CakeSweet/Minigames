@@ -8,7 +8,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>🏓 Ping Pong Multiplayer</title>
+    <title>Minigames Multiplayer</title>
 
     <!-- Favicon emoji 🏓 -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏓</text></svg>">
@@ -144,6 +144,7 @@
             gap: 8px;
             justify-content: center;
             margin-bottom: 6px;
+            transform: translateX(408px);
         }
 
         #nameRow label {
@@ -344,7 +345,7 @@
 
 <body>
 
-    <h1>🏓 Ping Pong</h1>
+    <h1>Minigames</h1>
 
     <div id="menu">
 
@@ -363,7 +364,7 @@
 
         <div id="gameSelector" role="tablist" aria-label="Seletor de jogos">
             <button class="gameTab active" data-game="pong" role="tab" aria-selected="true">
-                CH 1 · PONG
+                CH 1 · PING-PONG
             </button>
             <button class="gameTab" data-game="tableTennis" role="tab" aria-selected="false">
                 CH 2 · TÊNIS
@@ -379,7 +380,6 @@
 
     </div>
 
-    <div id="minigameLabel">Minigame: Pong</div>
 
     <div id="nameRow">
         <label>Seu nome:</label>
@@ -1225,7 +1225,7 @@
             });
 
             peer.on("open", () => {
-                statusEl.textContent = "Pronto. Crie uma sala ou entre em uma.";
+                statusEl.textContent = "Crie uma sala ou entre em uma.";
 
                 // Entra automaticamente se a página foi aberta por um link de sala
                 if (autoJoinRoom) {
